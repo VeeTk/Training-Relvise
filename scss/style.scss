@@ -8,6 +8,7 @@ body {
    font-weight: 500;
    color: #252b42;
    font-family: "Montserrat", sans-serif;
+   background: #fafafa;
 }
 // ____________________________________________________
 .wrapper {
@@ -155,6 +156,40 @@ body {
       z-index: 2;
       margin: -111px 0px 0px 0px;
    }
+   &__advantages{
+      
+   }
+}
+
+.page {
+
+		&__practice {}
+}
+// ----------Header-block------------
+.header-block {
+   text-align: center;
+   letter-spacing: 0.2px;
+		&__title {
+         font-weight: 700;
+         font-size: 40px;
+         line-height: 142%;
+         margin: 0px 0px 10px 0px;
+      }
+
+		&__subtitle {
+         color: #737373;
+
+      }
+      @media (max-width: 992px) {
+      &__title{
+         font-size: 33px;
+      }
+      }
+      @media (max-width: 767px) {
+      &__title{
+         font-size: 30px;
+      }
+      }
 }
 
 // ______Footer_______________________________________________
@@ -265,7 +300,6 @@ body {
 
 .services {
    &__container {
-      
    }
 
    &__body {
@@ -273,33 +307,32 @@ body {
    }
    @media (min-width: 670px) {
       &__body {
-      display: flex;
-      margin: 0px -15px 0px -15px;
-      flex-wrap: wrap;
-   }
+         display: flex;
+         margin: 0px -15px 0px -15px;
+         flex-wrap: wrap;
+      }
    }
 
    &__column {
       flex: 0 1 33.333%;
    }
-   
+
    @media (min-width: 670px) {
       &__column {
-      padding: 0px 15px 0px 15px;
+         padding: 0px 15px 0px 15px;
+      }
    }
-}
    @media (max-width: 992px) {
-   &__column{
-      flex: 0 1 50%;
+      &__column {
+         flex: 0 1 50%;
+      }
+      &__column:last-child {
+         flex: 1 1 100%;
+      }
+      &__column:not(:last-child) {
+         margin: 0px 0px 30px 0px;
+      }
    }
-   &__column:last-child {
-      flex: 1 1 100%;
-   }
-   &__column:not(:last-child) {
-      margin: 0px 0px 30px 0px;
-   }
-   }
-   
 
    &__item {
       height: 100%;
@@ -308,11 +341,11 @@ body {
       padding: 35px;
    }
 }
-.item-service > *:not(:last-child){
+.item-service > *:not(:last-child) {
    margin: 0px 0px 10px 0px;
 }
 .item-service {
-   &_green{
+   &_green {
       background-color: #0d5c63;
       color: #fff;
    }
@@ -331,3 +364,166 @@ body {
       line-height: 142%;
    }
 }
+
+
+// ______________Advantage__________________________________________________
+
+.page {
+		&__advantages {
+         padding: 80px 0;
+      }
+      @media (max-width: 992px) {
+      &__advantages {
+         padding: 50px 0;
+      }
+      }
+      @media (max-width: 767px) {
+      &__advantages {
+         padding: 40px 0;
+      }
+      }
+}
+.advantages {
+
+		&__container {}
+
+		&__header {
+         margin: 0px 0px 50px 0px;
+      }
+      @media (max-width: 767px) {
+      &__header {
+         margin: 0px 0px 25px 0px;
+      }
+      }
+
+		&__body {
+         display: flex;
+         margin: 0px -15px -30px;
+         flex-wrap: wrap;
+      }
+
+		&__column {
+         padding: 0px 15px;
+         margin: 0px 0px 30px 0px;
+         flex: 0 1 25%;
+      }
+
+      @media (max-width: 1020px) {
+      &__column {
+         flex: 0 1 50%;
+      }
+      }
+      @media (max-width: 560px) {
+      &__column {
+         flex: 0 1 100%;
+      }
+      }
+
+		&__item {
+         background-color: #fff;
+         padding: 30px;
+         text-align: center;
+         font-weight: 700;
+      }
+      &__item > *:not(:last-child) {
+         margin: 0px 0px 10px 0px;
+      }
+
+		&__icon {
+         display: flex;
+         height: 48px;
+         align-items: flex-end;
+         justify-content: center;
+      }
+
+		&__value {
+         font-size: 40px;
+         line-height: 142%;
+      }
+
+		&__text {
+         color: #737373;
+         font-size: 16px;
+         line-height: 150%;
+
+      }
+}
+
+
+
+// ----------------------------------------------
+
+
+
+.practice {
+
+   padding: 125px 0px 80px 0px;
+
+		&__container {}
+
+		&__header {
+         margin: 0px 0px 45px 0px;  
+      }
+
+		&__body {
+         margin: 0px -20px;
+         display: flex;
+         flex-wrap: wrap;
+      }
+
+		&__column {
+         padding: 0px 20px;
+         flex: 0 1 25%;
+      }
+
+		&__item {
+
+      }
+}
+
+.item-practice {
+   background-color: #fff;
+   display: flex;
+   flex-direction: column;
+   height: 100%;
+      &__content{
+         padding: 30px;
+         flex: 1 1 auto;
+         
+      }
+		&__link {
+         color: inherit;
+         display: inline-block;
+         &:not(:last-child){
+            margin: 0px 0px 15px 0px;
+         }
+         &:hover{
+            text-decoration: underline;
+         }
+      }
+
+		&__title {
+         letter-spacing: 0.1px;
+         font-size: 16px;
+         line-height: 150%;
+         font-weight: 700;
+      }
+
+		&__text {
+         color: #737373;
+         line-height: 142%;
+         &:not(:last-child){
+            margin: 0px 0px 15px 0px;
+         }
+      }
+
+		&__image {
+            display: block;
+         padding: 0px 0px 60% 0px;
+         position: relative;
+      }
+}
+
+
+
+
