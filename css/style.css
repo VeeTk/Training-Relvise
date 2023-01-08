@@ -530,6 +530,9 @@ body {
   }
 }
 
+.whoweare {
+  background: #fff;
+}
 .whoweare__header {
   margin: 0px 0px 100px 0px;
 }
@@ -609,6 +612,11 @@ body {
   margin: 0px 0px 30px 0px;
 }
 
+@media (max-width: 426px) {
+  .whoweare {
+    margin-top: 30px;
+  }
+}
 .item-whoweare {
   display: flex;
 }
@@ -635,4 +643,136 @@ body {
   width: 215px;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.clients {
+  padding: 50px 0;
+  margin: 0px 0px 10px 0px;
+}
+@media (max-width: 767px) {
+  .clients {
+    padding: 25px 0;
+  }
+}
+.clients__items {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.clients__item {
+  padding: 8px 15px;
+  flex: 0 1 16.666%;
+  text-align: center;
+  min-width: 140px;
+}
+.clients__item img {
+  max-width: 100%;
+}
+
+.page__subscribe {
+  position: relative;
+  padding: 0px 0px 20px 0px;
+}
+.page__subscribe::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 77px;
+  left: 0;
+  background: #252B42;
+}
+
+.subscribe__body {
+  position: relative;
+  z-index: 2;
+  margin: 0px 30px;
+  display: flex;
+  padding: 30px 50px;
+  align-items: center;
+  background-color: #17213c;
+  border-radius: 2px;
+  justify-content: space-between;
+}
+@media (max-width: 1025px) {
+  .subscribe__body {
+    margin: 0px 0px;
+  }
+}
+@media (max-width: 755px) {
+  .subscribe__body {
+    flex-direction: column;
+    padding: 15px 50px;
+  }
+}
+@media (max-width: 374px) {
+  .subscribe__body {
+    margin: 0px -15px;
+  }
+}
+.subscribe__title {
+  color: #fff;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 133%;
+  letter-spacing: 0.1px;
+  max-width: 270px;
+  flex: 0 1 50%;
+}
+@media (max-width: 755px) {
+  .subscribe__title {
+    margin: 0px 0px 30px 0px;
+    text-align: center;
+  }
+}
+@media (max-width: 424px) {
+  .subscribe__title {
+    font-size: 16px;
+    margin: 0px 0px 12px 0px;
+  }
+}
+.subscribe__form {
+  flex: 0 1 50%;
+  display: flex;
+  align-items: center;
+}
+.subscribe__input {
+  padding: 0px 20px 0px 20px;
+  min-height: 58px;
+  flex: 1 1 auto;
+  background: #f9f9f9;
+  border: 1px solid #e6e6e6;
+  border-radius: 5px 0px 0px 5px;
+  border-right: 0;
+}
+.subscribe__input:focus {
+  color: #000;
+}
+@media (max-width: 424px) {
+  .subscribe__input {
+    min-height: 42px;
+  }
+}
+.subscribe__button {
+  min-height: 58px;
+  background: #ff7b47;
+  border: 1px solid #e6e6e6;
+  border-radius: 0px 5px 5px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0px 22px;
+  color: #ffffff;
+  letter-spacing: 0.2px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 200%;
+}
+@media (max-width: 424px) {
+  .subscribe__button {
+    min-height: 42px;
+    font-size: 13px;
+  }
 }
