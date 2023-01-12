@@ -718,14 +718,14 @@ body {
    &__subscribe {
       position: relative;
       padding: 0px 0px 20px 0px;
-      &::before{
-         content: '';
+      &::before {
+         content: "";
          position: absolute;
-         bottom:0;
+         bottom: 0;
          width: 100%;
          height: 77px;
          left: 0;
-         background: #252B42;
+         background: #252b42;
       }
    }
 }
@@ -784,7 +784,7 @@ body {
       border: 1px solid #e6e6e6;
       border-radius: 5px 0px 0px 5px;
       border-right: 0;
-      &:focus{
+      &:focus {
          color: #000;
       }
       @media (max-width: 424px) {
@@ -810,6 +810,205 @@ body {
       @media (max-width: 424px) {
          min-height: 42px;
          font-size: 13px;
+      }
+   }
+}
+
+// ------------------------------------------------------
+
+.getintouch {
+   padding: 80px 0px 135px 0px;
+   &__container {
+   }
+
+   &__header {
+      margin: 0px 0px 80px 0px;
+   }
+
+   &__items {
+      @media (min-width: 992px) {
+         display: flex;
+         align-items: center;
+      }
+   }
+
+   &__item {
+      flex: 0 1 33.333%;
+   }
+
+   .item-getintouch {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 50px 15px;
+      background-color: #fff;
+
+      & > *:not(:last-child) {
+         padding-bottom: 15px;
+      }
+      &__icon {
+      }
+
+      &__emails {
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         align-items: center;
+      }
+
+      &__email {
+         color: inherit;
+         &:hover {
+            text-decoration: underline;
+         }
+      }
+
+      &__label {
+         font-weight: 700;
+         font-size: 16px;
+         line-height: 150%;
+         letter-spacing: 0.1px;
+         color: #252b42;
+      }
+
+      &__button {
+         border: 1px solid #ff7b47;
+         border-radius: 5px;
+         color: #ff7b47;
+         min-height: 44px;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         line-height: 142%;
+         text-align: center;
+         padding: 5px 20px;
+         transition: all 0.2s ease 0s;
+         &:hover {
+            background-color: #ff7b47;
+            color: #fff;
+         }
+      }
+   }
+
+   ._active {
+      background: #252b42;
+      color: #fff;
+      padding: 80px 15px;
+      .item-getintouch__button {
+         border: 1px solid #fff;
+         color: #fff;
+      }
+      .item-getintouch__label {
+         color: #fff;
+      }
+   }
+}
+
+// ----------------------------
+
+.contact {
+   background-color: #fff;
+   align-items: center;
+   padding: 40px 0px;
+   &__body {
+      display: flex;
+      justify-content: space-between;
+      padding: 0px 38px 0px 0px;
+      align-items: center;
+      @media (max-width: 767px) {
+         display: flex;
+         flex-direction: column;
+         padding: 0px 0px 0px 0px;
+      }
+   }
+
+   &__content {
+      text-align: left;
+      padding: 0px 0px 0px 5px;
+      @media (max-width: 767px) {
+         text-align: center;
+         margin: 0px 0px 30px 0px;
+      }
+   }
+
+   &__title {
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 133%;
+      letter-spacing: 0.1px;
+      color: #252b42;
+   }
+
+   &__text {
+      color: #737373;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 20px;
+      letter-spacing: 0.2px;
+   }
+
+   &__button {
+      width: 160px;
+      height: 58px;
+      background: #ff7b47;
+      border-radius: 5px;
+      margin: 0px 0px 0px 35px;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      justify-content: center;
+      color: #fff;
+      transition: all 0.2s ease 0s;
+      @media (max-width: 767px) {
+         margin: 0px 0px 0px 0px;
+      }
+      &:hover {
+         background: #fe672b;
+         box-shadow: #3e4351 1px 1px 5px;
+      }
+   }
+}
+
+// ----------navbar-bottom----------------
+
+.navbar {
+   background: #17213c;
+
+   &__body {
+      display: flex;
+      justify-content: space-between;
+      padding: 50px 0px;
+      color: #fff;
+   }
+
+   &__column {
+   }
+
+   &__title {
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 150%;
+      letter-spacing: 0.1px;
+      margin: 0px 0px 20px 0px;
+   }
+
+   &__items {
+      display: flex;
+      flex-direction: column;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 171%;
+      letter-spacing: 0.1px;
+      & :not(:last-child) {
+         margin: 0px 0px 10px 0px;
+      }
+   }
+
+   &__item {
+      cursor: pointer;
+      &:hover {
+         text-decoration: underline;
       }
    }
 }
