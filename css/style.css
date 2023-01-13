@@ -5,23 +5,31 @@
   border: 0;
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: border-box;
 }
 
-:focus, :active {
+:focus,
+:active {
   outline: none;
 }
 
-a:focus, a:active {
+a:focus,
+a:active {
   outline: none;
 }
 
-nav, footer, header, aside {
+nav,
+footer,
+header,
+aside {
   display: block;
 }
 
-html, body {
+html,
+body {
   height: 100%;
   width: 100%;
   font-size: 100%;
@@ -32,7 +40,9 @@ html, body {
   -webkit-text-size-adjust: 100%;
 }
 
-input, button, textarea {
+input,
+button,
+textarea {
   font-family: inherit;
 }
 
@@ -40,7 +50,7 @@ input::-ms-clear {
   display: none;
 }
 
-button {
+a, button {
   cursor: pointer;
 }
 
@@ -49,7 +59,8 @@ button::-moz-focus-inner {
   border: 0;
 }
 
-a, a:visited {
+a,
+a:visited {
   text-decoration: none;
 }
 
@@ -61,7 +72,12 @@ img {
   vertical-align: top;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-size: inherit;
   font-weight: inherit;
 }
@@ -283,6 +299,7 @@ body {
   letter-spacing: 0.2px;
   text-align: center;
   margin: 5px 7px;
+  transition: all 0.15s ease 0s;
 }
 @media (max-width: 479px) {
   .main-block__button:not(:last-child) {
@@ -298,9 +315,18 @@ body {
   background: #ff7b47;
   color: #fff;
 }
+.main-block__button-orange:hover {
+  background: #fd6b31;
+  box-shadow: #3e4351 1px 1px 3px;
+}
 .main-block__button-border {
   border: 1px solid #0d5c63;
   color: #0d5c63;
+}
+.main-block__button-border:hover {
+  color: #fff;
+  background: #0d5c63;
+  box-shadow: #3e4351 1px 1px 3px;
 }
 @media (max-width: 1300px) {
   .main-block__image img {
@@ -584,7 +610,7 @@ body {
 }
 @media (max-width: 992px) {
   .whoweare__content {
-    padding: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 15px;
   }
 }
 .whoweare__title {
@@ -769,12 +795,16 @@ body {
   font-weight: 400;
   font-size: 14px;
   line-height: 200%;
+  transition: all 0.15s ease 0s;
 }
 @media (max-width: 424px) {
   .subscribe__button {
     min-height: 42px;
     font-size: 13px;
   }
+}
+.subscribe__button:hover {
+  background: #fd6b31;
 }
 
 .getintouch {
@@ -799,6 +829,11 @@ body {
   align-items: center;
   padding: 50px 15px;
   background-color: #fff;
+}
+@media (max-width: 426px) {
+  .getintouch .item-getintouch {
+    padding: 30px 15px;
+  }
 }
 .getintouch .item-getintouch > *:not(:last-child) {
   padding-bottom: 15px;
@@ -844,9 +879,22 @@ body {
   color: #fff;
   padding: 80px 15px;
 }
+@media (max-width: 992px) {
+  .getintouch ._active {
+    padding: 50px 15px;
+  }
+}
+@media (max-width: 426px) {
+  .getintouch ._active {
+    padding: 30px 15px;
+  }
+}
 .getintouch ._active .item-getintouch__button {
   border: 1px solid #fff;
   color: #fff;
+}
+.getintouch ._active .item-getintouch__button:hover {
+  border: 1px solid #ff7b47;
 }
 .getintouch ._active .item-getintouch__label {
   color: #fff;
@@ -913,8 +961,8 @@ body {
   }
 }
 .contact__button:hover {
-  background: #fe672b;
-  box-shadow: #3e4351 1px 1px 5px;
+  background: #fd6b31;
+  box-shadow: #3e4351 1px 1px 3px;
 }
 
 .navbar {
@@ -926,12 +974,44 @@ body {
   padding: 50px 0px;
   color: #fff;
 }
+@media (max-width: 1000px) {
+  .navbar__body {
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 426px) {
+  .navbar__body {
+    padding: 30px 0px;
+  }
+}
+.navbar__column {
+  flex: 0 1 16.666%;
+  min-width: 155px;
+}
+.navbar__column:last-child {
+  flex: 0 1 33.334%;
+}
+@media (max-width: 1000px) {
+  .navbar__column:not(:last-child) {
+    padding: 0px 0px 30px 0px;
+  }
+}
+@media (max-width: 321px) {
+  .navbar__column:not(:last-child) {
+    min-width: 142px;
+  }
+}
 .navbar__title {
   font-weight: 700;
   font-size: 16px;
   line-height: 150%;
   letter-spacing: 0.1px;
   margin: 0px 0px 20px 0px;
+}
+@media (max-width: 350px) {
+  .navbar__title {
+    font-size: 14px;
+  }
 }
 .navbar__items {
   display: flex;
@@ -944,9 +1024,22 @@ body {
 .navbar__items :not(:last-child) {
   margin: 0px 0px 10px 0px;
 }
+@media (max-width: 350px) {
+  .navbar__items {
+    font-size: 13px;
+  }
+}
 .navbar__item {
+  display: flex;
   cursor: pointer;
 }
 .navbar__item:hover {
   text-decoration: underline;
+}
+.navbar__text {
+  margin: 0px 0px 0px 10px;
+  color: #fff;
+}
+.navbar__container {
+  padding: 0px 15px;
 }
